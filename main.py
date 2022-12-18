@@ -21,8 +21,8 @@ class Loveletter(object):
         del poker1[0:2]
         player.Player().getpoker(poker1)  # 传递牌库
         #print("初始化牌堆是  %s" % poker1)
-        self.player1.drawcard(self.player1)
-        self.player2.drawcard(self.player2)
+        self.player1.drawcard()
+        self.player2.drawcard()
         # print("玩家1的手牌是%s  " % self.player1.gethandcard())
         # print("玩家2的手牌是%s  " % self.player2.gethandcard())
         # print("第一回合牌库%s  " % self.poker1)
@@ -31,7 +31,7 @@ class Loveletter(object):
         winconditions = 0
         playerround = 1
         while winconditions != 1 and 2:
-            self.player1.drawcard(self.player1)
+            self.player1.drawcard()
             while playerround == 1:
                 print("玩家1现在的手牌是%s" % self.player1.gethandcard())
                 # 判断侍女是否被使用
@@ -62,7 +62,7 @@ class Loveletter(object):
             '''
             while playerround == 2:
                 # print("winconditions:", winconditions)
-                self.player2.drawcard(self.player2)
+                self.player2.drawcard()
                 print("玩家2现在的手牌是%s" % self.player2.gethandcard())
                 print("使用哪张牌?  输入0是第一张，1是第二张牌")
                 caozuo = input()
@@ -77,7 +77,7 @@ class Loveletter(object):
                     playerround = 0
             '''
             # 电脑操作
-            self.player2.drawcard(self.player2)
+            self.player2.drawcard()
             while playerround == 2:
                 print("现在由玩家2(电脑)操作")
                 time.sleep(0.6)

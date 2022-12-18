@@ -39,8 +39,8 @@ class Player(object):
         if card == "公主":
             return 8
 
-    def drawcard(self, player):  # 抽卡 哪位玩家的手牌
-        player.handcard.append(Player.poker1[0])
+    def drawcard(self):  # 抽卡
+        self.handcard.append(Player.poker1[0])
         del Player.poker1[0]
 
     def usecard(self, i, player1, player2):  # 使用卡牌 第几张手牌，使用玩家，被使用玩家
